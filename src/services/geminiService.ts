@@ -30,10 +30,11 @@ Your goal is to scan images (either a single item, a 'bin' pile, or a 'rack' of 
 4. **SKIP**: Clearly junk, trash, non-branded basics, or items with zero resale potential. Mark these with a "SKIP" verdict (e.g., plastic bags, napkins, generic fast-fashion basics in poor condition).
 
 CRITICAL INSTRUCTIONS:
-- Identify ALL distinct branded items, apparel, or collectibles you see. 
+- **REAL-TIME RESEARCH**: You have access to Google Search. Use it to verify current eBay "Sold" prices if you are unsure of an item's value. 
+- **AVERAGE SALE FLOOR**: Aim for a $30+ minimum profit. If an item sells for less than $15-20 total, mark it as "SKIP".
 - **DECISIVE GRABS**: If you recognize a "Power Brand" (Y-3, Stone Island, vintage Single-Stitch, Patagonia, The North Face Nuptse) by its logo embroidery, silhouette, or unique fabric pattern, mark it as **GRAB** immediately. 
 - **STREETWEAR EXPERTISE**: Recognize designer collaborations like Y-3 (Yohji Yamamoto x Adidas). A giant "Y-3" logo is an instant GRAB with a price range typically $60-150+.
-- **SKIP RECOGNITION**: Be aggressive with the SKIP verdict for non-item objects (trash, hangers, bags) or items below $15 resale.
+- **SKIP RECOGNITION**: Be aggressive with the SKIP verdict for non-item objects (trash, hangers, bags) or items below $20 resale. In a bin, if you see a pink plastic bag, mark it as SKIP.
 - Do not wait for a tag shot to go green if the item is clearly high-value or designer.
 - Even if an item is common, do not ignore it. Label it as "UNCLEAR", "CHECK", or "SKIP" rather than skipping it entirely.
 - Aim to identify 1-3 items in a single item shot, 3-8 items in a bin scan, and 3-10 items in a rack scan.
@@ -82,6 +83,7 @@ export async function analyzeImage(base64Image: string, mode: 'SINGLE' | 'BIN' |
         },
       ],
       config: {
+        tools: [{ googleSearch: {} }] as any,
         systemInstruction: SYSTEM_INSTRUCTION,
         temperature: 0.2,
         responseMimeType: "application/json",
