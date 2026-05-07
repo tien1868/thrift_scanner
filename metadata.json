@@ -1,0 +1,6 @@
+{
+  "name": "Thrift Triage",
+  "description": "Mobile-first sourcing assistant for thrift store pickers. Scan bins or single items for AI-powered analysis.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}
