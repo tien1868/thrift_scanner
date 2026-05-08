@@ -1,6 +1,6 @@
 {
-  "name": "Thrift Triage",
-  "description": "Mobile-first sourcing assistant for thrift store pickers. Scan bins or single items for AI-powered analysis.",
+  "name": "Bin Scanner",
+  "description": "Automated Picker Optical Companion. A high-performance sourcing assistant for thrift store explorers and vintage hunters.",
   "requestFramePermissions": ["camera"],
   "majorCapabilities": []
 }
